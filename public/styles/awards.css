@@ -82,3 +82,22 @@ footer {
 
 	}
 }
+
+@media only screen and (max-width: 359.98px) {
+	.progra {
+		width: 250px;
+		height: 167.66px;
+	}
+}
+@media only screen and (max-width: 299.98px) {
+	.progra {
+		width: 200px;
+		height: 133.33px;
+	}
+}
+@media only screen and (max-width: 219.98px) {
+	.progra {
+		width: 140px;
+		height: 93.33px;
+	}
+}

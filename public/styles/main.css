@@ -19,6 +19,8 @@ body {
   background-color: #1d1d1d;
   font-family: "Yanone Kaffeesatz", sans-serif;
   color: #fff;
+	list-style: none;
+	
 }
 /* Header Start */
 
@@ -38,18 +40,13 @@ body {
 .main-menu__top {
   background: #000;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   padding: 2rem 0;
 }
@@ -62,19 +59,14 @@ body {
   top: 0;
   right: auto;
   bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   z-index: 3;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -134,18 +126,13 @@ body {
 /* Menu Start */
 .main-menu_nav {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border-top: 1px solid #282828;
   margin-bottom: 109px;
@@ -160,8 +147,6 @@ body {
   text-decoration: none;
   line-height: 4rem;
   border-bottom: 1px solid #282828;
-  -webkit-transition: color 0.3s, background-color 0.3s;
-  -o-transition: color 0.3s, background-color 0.3s;
   transition: color 0.3s, background-color 0.3s;
 }
 .main-menu_nav a:hover {
@@ -296,7 +281,6 @@ body {
 }
 
 #abt h1 {
-  font-size: 10rem;
   z-index: 0;
   opacity: 0.1;
   margin-bottom: 1rem;
@@ -330,6 +314,9 @@ body {
 /* About End */
 
 /* Skills Start */
+#skills {
+	margin-bottom: 5rem;
+}
 .about-me-info {
 	max-width: 600px;
   background-color: #252627;
@@ -358,10 +345,64 @@ body {
 	right: 15%;
 
 }
-#skills {
-	height: 500px;
-} 
+
+
 /* Skills End */
+
+/* Lets Start */
+#lets {
+	overflow-x: hidden;
+	margin-bottom: 4rem;
+}
+.skill_bar {
+	width: 500px;
+	margin: 20px auto;
+	color: white;
+}
+.skill_bar li{
+	margin: 20px 0;
+}
+.bar	{
+	background: #353b48;
+	display: block;
+	height: 2px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: 3px;
+	/* overflow: hidden; */
+	box-shadow: 0 0 10px #2187e7b3;
+}
+.bar span {
+	height: 2px;
+	float: left;
+	background-color: #2187e7;
+}
+.bar .html {
+	background: red;
+}
+.bar .js {
+	background: yellow;
+}
+.bar .python {
+	background: #3776ab;
+}
+.html {
+	width: 90%;
+	animation: html 2s;
+}
+.css {
+	width: 70%;
+	animation: css 2s;
+}
+.js {
+	width: 65%;
+	animation: js 2s;
+}
+.python {
+	width: 10%;
+	animation: python 2s;
+}
+/* Lets End */
+
 
 /* Footer Start */
 footer {
@@ -445,6 +486,9 @@ footer {
 		top: 20%;
 		left: 20%;
 	}
+	.bar {
+		width: 300px;
+	}
 }
 @media only screen and (max-width: 359.98px) {
 	#abt {
@@ -473,6 +517,9 @@ footer {
 	.about-me-info {
 		font-size: 14px;
 	}
+	.bar {
+		width: 200px;
+	}
 }
 @media only screen and (max-width: 300.99px) {
 	.welcome {
@@ -494,6 +541,10 @@ footer {
 	#sidebar ul li a:last-child {
 		font-size: 10px;
 	}
+	.bar {
+		width: 100px;
+	}
+
 }
 @media only screen and (max-width: 224.998px) {
 	.welcome {
@@ -510,5 +561,40 @@ footer {
 @media only screen and (max-width: 199.98px) {
 	.welcome {
 		font-size: 20px;
+	}
+}
+
+
+/* Animations */
+@keyframes html {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 90%;
+	}
+}
+@keyframes css {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 70%;
+	}
+}
+@keyframes js {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 65%;
+	}
+}
+@keyframes python {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 10%;
 	}
 }

@@ -18,6 +18,7 @@ app.use(express.json())
 app.use('/css', express.static(__dirname + ('views/styles/')))
 
 
+
 app.use('/awards', (req, res) => {
 	res.render('pages/awards')
 })
