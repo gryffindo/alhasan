@@ -17,6 +17,14 @@ app.use("/css", express.static(__dirname + "views/styles/"));
 
 
 // Article Pages Routes
+app.use('/article/2', (req, res) => {
+	let article2 = data.article2
+
+	res.render("pages/article/2", {
+		article2
+	})
+})
+
 app.use("/article/1", (req, res) => {
 	let article1 = data.article1
 
