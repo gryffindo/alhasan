@@ -32,8 +32,13 @@ app.use("/article/1", (req, res) => {
 		article1
 	})
 })
-app.use("/article/2", (req, res) => {
-	res.render("pages/article/2")
+
+app.use("/article/3", (req, res) => {
+	let article3 = data.article3
+
+	res.render("pages/article/3", {
+		article3
+	})
 })
 // Routes
 app.use("/awards", (req, res) => {
@@ -47,9 +52,11 @@ app.use("/article", (req, res) => {
 		// article data
 		let article1 = data.article1
 		let article2 = data.article2
+		let article3 = data.article3
   res.render("pages/article", {
 		article1,
-		article2
+		article2,
+		article3
 	});
 });
 

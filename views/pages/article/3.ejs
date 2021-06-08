@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Article => 1</title>
-		<link rel="stylesheet" href="../styles/main.css">
-    <!-- <link rel="stylesheet" href="../styles/main.css"> -->
+    <title>Article >>3</title>
+    <link rel="stylesheet" href="../styles/main.css" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -34,7 +33,7 @@
       .article-1 {
         margin-bottom: 6rem;
         margin-top: 4rem;
-				max-width: 600px;
+        max-width: 600px;
         background-color: #252627;
         box-shadow: 0 0 1.2rem rgba(0, 0, 0, 25);
         padding: 50px;
@@ -55,34 +54,53 @@
         max-width: 500px;
         text-align: justify;
         justify-content: center;
-        
       }
       .title {
         color: #ed5565;
         margin-bottom: 2rem;
       }
-			@media only screen and (max-width: 299.98px) {
-				.title {
-					font-size: 1.5rem;
-				}
-				.desc {
-					font-size: 14px;
-				}
-				.article-1 {
-					padding: 30px;
-				}
-			}
+      @media only screen and (max-width: 299.98px) {
+        .title {
+          font-size: 1.5rem;
+        }
+        .desc {
+          font-size: 14px;
+        }
+        .article-1 {
+          padding: 30px;
+        }
+      }
     </style>
   </head>
   <body>
     <header><%- include('../partials/header.ejs') %></header>
     <section class="article-1">
-      <% for(let a of article1) { %>
+      <% for(let a of article3) { %>
       <h1 class="title"><%= a.title %></h1>
-      <p class="desc"><%= a.description %></p>
+      <p class="desc"><%= a.desc_a %></p>
+      <p>
+        $$(ct')^2 = (ct)^2 + (vt')^2$$ $$or, c^2t'^2 = c^2t^2+v^2t'^2$$ $$or,
+        t'^2 = t^2 + \frac{v^2}{c^2}t'^2$$ $$or, t'^2 - \frac{v^2}{c^2}t'^2=t^2
+        $$ $$or, t'^2(1-\frac{v^2}{c^2}) = t^2$$ $$or, t'^2 =
+        \frac{t^2}{(1-\frac{v^2}{c^2})}$$
+        $$t'=\frac{t}{\sqrt{(1-\frac{v^2}{c^2})}}$$
+      </p>
+      <p class="desc"><%= a.desc_b %></p>
+      <p>
+        $$ t'=\frac{t}{\sqrt{(1-\frac{v^2}{c^2})}} $$
+				$$t' = \frac{6}{\sqrt{(1-0.8^2)}}$$
+				$$ t' = 10 \ years $$
+      </p>
+			<p class="desc"><%=	a.desc_c %></p>
       <% } %>
     </section>
   </body>
-
-	<script src="../scripts/main.js"></script>
+  <script src="../scripts/main.js"></script>
+  <!-- MathJAx -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+  ></script>
 </html>
