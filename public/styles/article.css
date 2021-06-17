@@ -1,18 +1,18 @@
 .hello_kitty {
-	z-index: 0;
+  z-index: 0;
   opacity: 0.1;
   margin-bottom: 1rem;
   color: #707070;
   font-size: 8rem;
   font-weight: 700;
   text-align: right;
-	/* margin-right: 6rem; */
-	position: relative;
-	right: 15%;
+  /* margin-right: 6rem; */
+  position: relative;
+  right: 15%;
 }
 .art {
-	margin-bottom: 4rem;
-	max-width: 600px;
+  margin-bottom: 4rem;
+  max-width: 600px;
   background-color: #252627;
   box-shadow: 0 0 2.2rem rgba(0, 0, 0, 25);
   padding: 50px;
@@ -22,35 +22,79 @@
   right: 50%;
   transform: translateX(-50%);
   z-index: 1;
-	font-family: 'Fira Sans Condensed', sans-serif;
-	font-size: 1.3rem;
-	border-radius: 3rem;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 1.3rem;
+  border-radius: 3rem;
 }
 .art h1 {
-	color: red;
-	margin-bottom: 2rem;
+  color: red;
+  margin-bottom: 2rem;
 }
 .art p {
-	font-size: 16px;
+  font-size: 16px;
 }
 .art a {
-	text-decoration: none;
-	color: #252627;
-	background: #ed5565;
-	border-radius: 14px;
-	padding: 10px 25px;
-	display: inline-block;
-	margin-top: 1rem;
-	/* position: absolute; */
-	margin-left: 50%;
-	transition: 0.5s;
+  text-decoration: none;
+  color: #252627;
+  background: #ed5565;
+  border-radius: 14px;
+  padding: 10px 25px;
+  display: inline-block;
+  margin-top: 1rem;
+  /* position: absolute; */
+  margin-left: 50%;
+  transition: 0.5s;
 }
 .art a:hover {
-	background: #000;
-	color: #ed5565;
+  background: #000;
+  color: #ed5565;
 }
 .art span {
-	display: inline-block;
-	margin-top: 10px;
-	color: #ed5565;
+  display: inline-block;
+  margin-top: 10px;
+  color: #ed5565;
 }
+
+.snow {
+  position: absolute;
+  /* min-width: 100vw; */
+  height: 110vh;
+  /* height: 100%; */
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+}
+
+.snow .svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#snow-top-layer {
+  will-change: transform;
+  transform: translateY(-768px);
+  -webkit-animation: fall 22.5s infinite linear;
+  animation: fall 22.5s infinite linear;
+}
+
+#snow-bottom-layer {
+  will-change: transform;
+  transform: translateY(-768px);
+  -webkit-animation: fall 45s infinite linear;
+  animation: fall 45s infinite linear;
+}
+
+@-webkit-keyframes fall {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fall {
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Animation End */
